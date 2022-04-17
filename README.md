@@ -6,7 +6,7 @@ Abstraction for Utilizing [Rocket.Chat](https://rocket.chat/)'s [Realtime API](h
 
 (RxJS version 7)
 ```
-yarn add --save @sadfriday/rocket.chat.realtime.api.rxjs
+yarn add @sadfriday/rocket.chat.realtime.api.rxjs
 ```
 
 

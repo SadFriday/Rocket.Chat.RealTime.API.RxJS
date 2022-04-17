@@ -68,7 +68,7 @@ export declare class RealTimeAPI {
     /**
      * Get Observalble to the Result of Method Call from Rocket.Chat Realtime API
      */
-    callMethod(method: string, ...params: Array<{}>): import("rxjs/internal/Observable").Observable<any>;
+    callMethod(method: string, params: Array<any>): import("rxjs/internal/Observable").Observable<any>;
     /**
      * getSubscription
      */

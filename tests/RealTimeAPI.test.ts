@@ -329,7 +329,11 @@ describe("RealTimeAPI tests", () => {
             ])
           ); //Expecting params to be Array of Object { user: {username: "username"}, password: { algorithm: "sha-256", digest: "..."} }
           resultId = message.id;
-          const resultMessage = { msg: "result", id: resultId, error: error };
+          const resultMessage = {
+            msg: "result",
+            id: resultId,
+            error: error
+          };
 
           socket.send(JSON.stringify(resultMessage));
         });
@@ -353,7 +357,7 @@ describe("RealTimeAPI tests", () => {
     const method = "testMethod";
     const params = ["example-parameter"];
 
-    realtimeAPI$.callMethod(method, ...params).subscribe();
+    realtimeAPI$.callMethod(method, params).subscribe();
 
     mockServer.on("connection", (socket: WebSocket) => {
       expect(socket.url).toEqual(url); // Expecting websocket url.
